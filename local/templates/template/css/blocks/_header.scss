@@ -1,0 +1,24 @@
+@use "../helpers/index" as *;
+
+.header {
+  padding: 20px 50px;
+  display: flex;
+  align-items: center;
+  gap: 44px;
+  border-bottom: 1px solid var(--border-on-primary);
+
+  &__menu {
+    margin-left: 16px;
+  }
+
+  &__icons {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__city {
+
+  }
+}

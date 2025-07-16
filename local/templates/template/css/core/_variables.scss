@@ -1,0 +1,113 @@
+@use "../helpers" as *;
+
+:root {
+
+  --black-black-main: #1F233E;
+  --black-black-700: #31354D;
+  --black-black-600: #41445B;
+  --black-black-500: #797B8B;
+  --black-black-400: #A5A7B2;
+  --black-black-300: #DDDEE2;
+  --black-black-200: #E9E9EC;
+  --black-black-100: #F4F4F5;
+
+  --blue-blue-800: #094AC5;
+  --blue-blue-700: #0552E2;
+  --blue-blue-main: #005AFF;
+  --blue-blue-600: #5791FE;
+  --blue-blue-200: #CCDEFF;
+
+  --white-white: #fff;
+
+  --color-red-main: #FC1A42;
+  --color-red-600: #FA738C;
+  --color-red-100: #F5DFE3;
+
+  --color-green-main: #00BB78;
+  --color-green-100: #E0F7EF;
+
+  --text-primary: var(--black-black-main);
+  --text-secondary: var(--black-black-500);
+  --text-accent: var(--blue-blue-main);
+  --text-accent-hover: var(--blue-blue-700);
+  --text-accent-active: var(--blue-blue-800);
+  --text-error: var(--color-red-main);
+  --text-success: var(--color-green-main);
+  --text-inactive: var(--black-black-400);
+  --text-inverted: var(--white-white);
+  --text-on-color: var(--white-white);
+
+  --border-primary: var(--black-black-200);
+  --border-on-primary: var(--black-black-300);
+  --border-accent: var(--blue-blue-main);
+  --border-inverted: var(--white-white);
+  --border-error: var(--color-red-main);
+  --border-success: var(--color-green-main);
+
+  --bg-primary: var(--white-white);
+  --bg-secondary: var(--black-black-100);
+  --bg-accent: var(--blue-blue-main);
+  --bg-accent-hover: var(--blue-blue-700);
+  --bg-accent-active: var(--blue-blue-800);
+  --bg-inverted: var(--black-black-main);
+  --bg-error: var(--color-red-main);
+  --bg-error-muted: var(--color-red-100);
+  --bg-success: var(--color-green-main);
+  --bg-success-muted: var(--color-green-100);
+
+  --icon-primary: var(--black-black-main);
+  --icon-accent: var(--blue-blue-main);
+  --icon-accent-hover: var(--blue-blue-700);
+  --icon-accent-active: var(--blue-blue-800);
+  --icon-error: var(--color-red-main);
+  --icon-success: var(--color-green-main);
+  --icon-inactive: var(--black-black-400);
+  --icon-on-color: var(--white-white);
+  --icon-inverted: var(--white-white);
+  --icon-secondary: var(--black-black-500);
+
+  --text-primary-hover: var(--black-black-700);
+  --text-primary-active: var(--black-black-600);
+  --icon-primary-hover: var(--black-black-700);
+  --icon-primary-active: var(--black-black-600);
+
+  --bg-inverted-hover: var(--black-black-700);
+  --bg-inverted-active: var(--black-black-600);
+  --bg-inactive: var(--black-black-300);
+  --bg-inactive-blue: var(--blue-blue-600);
+
+  --text-inactive-blue: var(--blue-blue-600);
+  --border-inactive-blue: var(--blue-blue-600);
+  --icon-inactive-blue: var(--blue-blue-600);
+  --border-secondary: var(--black-black-main);
+
+  --text-error-blue-bg: var(--color-red-600);
+  --border-error-blue-bg: var(--color-red-600);
+  --icon-error-blue-bg: var(--color-red-600);
+  --text-inverted-dark-bg: var(--black-black-300);
+  --text-inverted-blue-bg: var(--blue-blue-200);
+  --border-inverted-dark-bg: var(--black-black-500);
+
+
+  --font-family: "Onest", sans-serif;
+
+  --font-size: 16px;
+  --font-weight: 400;
+  --line-height: 1.5;
+
+  --container-width: 1440px;
+  --container-padding: 0 20px;
+
+  --transition: 0.4s;
+
+  @include xlg-block {
+    --container-width: 1140px;
+  }
+  @include md-block {
+    --container-width: 1180px;
+    --container-padding: 0 40px;
+  }
+  @include xs-block {
+    --container-padding: 0 20px;
+  }
+}

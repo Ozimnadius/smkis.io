@@ -1,0 +1,320 @@
+@use "../helpers" as *;
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+.h7 {
+  font-weight: 500;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4 {
+  text-transform: uppercase;
+}
+
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+.h7 {
+  line-height: 130%;
+}
+
+h1, .h1 {
+  font-size: 110px;
+  line-height: 1.1;
+  @include xlg-block {
+    font-size: 84px;
+  }
+  @include md-block {
+    font-size: 64px;
+  }
+  @include xs-block {
+    font-size: 44px;
+  }
+}
+
+h2, .h2 {
+  font-size: 54px;
+  @include xlg-block {
+    font-size: 46px;
+  }
+  @include md-block {
+    font-size: 46px;
+  }
+  @include xs-block {
+    font-size: 38px;
+  }
+}
+
+h3, .h3 {
+  font-size: 44px;
+  @include xlg-block {
+    font-size: 40px;
+  }
+  @include md-block {
+    font-size: 36px;
+  }
+  @include xs-block {
+    font-size: 32px;
+  }
+}
+
+h4, .h4 {
+  font-size: 38px;
+  @include xlg-block {
+    font-size: 34px;
+  }
+  @include md-block {
+    font-size: 30px;
+  }
+  @include xs-block {
+    font-size: 28px;
+  }
+}
+
+h5, .h5 {
+  font-size: 32px;
+  @include xlg-block {
+    font-size: 30px;
+  }
+  @include md-block {
+    font-size: 26px;
+  }
+  @include xs-block {
+    font-size: 24px;
+  }
+}
+
+h6, .h6 {
+  font-size: 28px;
+  @include xlg-block {
+    font-size: 26px;
+  }
+  @include md-block {
+    font-size: 20px;
+  }
+}
+
+.h7 {
+  font-size: 20px;
+}
+
+.subtitle {
+  font-size: 24px;
+  color: var(--text-secondary);
+  @include xlg-block {
+    font-size: 22px;
+  }
+  @include md-block {
+    font-size: 20px;
+  }
+}
+
+.caption {
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.text-small {
+  font-size: 14px;
+}
+
+.caption-small {
+  font-size: 12px;
+}
+
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  padding: var(--container-padding);
+  margin: 0 auto;
+}
+
+.page {
+  overflow: hidden;
+}
+
+.icon-fill {
+  display: flex;
+  --color: var(--icon-primary);
+  @include tr;
+
+  @include hover {
+    --color: var(--icon-accent-hover);
+  }
+  @include active{
+    --color: var(--icon-accent-active);
+  }
+
+  svg {
+
+    path {
+      fill: var(--color);
+    }
+  }
+
+}
+
+.icon-stroke {
+  --color: var(--icon-primary);
+  display: flex;
+  @include tr;
+
+  @include hover {
+    --color: var(--icon-accent-hover);
+  }
+
+  svg {
+
+    path {
+      stroke: var(--color);
+    }
+  }
+
+}
+
+.btn {
+  border-radius: 100vmax;
+  font-weight: 500;
+  text-align: center;
+  display: flex;
+  padding-inline: 27px;
+  @include tr;
+
+  &--large {
+    padding-block: 18px;
+  }
+
+  &--small {
+    padding-block: 11px;
+  }
+
+  &--blue {
+    color: var(--icon-on-color);
+    background: var(--bg-accent);
+    border: 1px solid var(--bg-accent);
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: var(--bg-accent-hover);
+        background-color: var(--bg-accent-hover);
+      }
+    }
+
+    &:active {
+      background: var(--bg-accent-active);
+      background-color: var(--bg-accent-active);
+    }
+
+    @media (any-hover: none) {
+      &:active {
+        background: var(--bg-accent-hover);
+        background-color: var(--bg-accent-hover);
+      }
+    }
+  }
+
+  &--black {
+    color: var(--icon-on-color);
+    background: var(--bg-inverted);
+    border: 1px solid var(--bg-inverted);
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: var(--bg-inverted-hover);
+        border-color: var(--bg-inverted-hover);
+      }
+    }
+
+    &:active {
+      background: var(--bg-inverted-active);
+      border-color: var(--bg-inverted-active);
+    }
+
+    @media (any-hover: none) {
+      &:active {
+        background: var(--bg-inverted-hover);
+        border-color: var(--bg-inverted-hover);
+      }
+    }
+  }
+
+  &--white {
+    color: var(--text-primary);
+    background: var(--bg-primary);
+    border: 1px solid var(--bg-primary);
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: var(--bg-inverted-hover);
+        border-color: var(--bg-inverted-hover);
+      }
+    }
+
+    &:active {
+      background: var(--bg-inverted-active);
+      border-color: var(--bg-inverted-active);
+    }
+
+    @media (any-hover: none) {
+      &:active {
+        background: var(--bg-inverted-hover);
+        border-color: var(--bg-inverted-hover);
+      }
+    }
+  }
+
+  &--border {
+    border: 1px solid var(--border-on-primary);
+    color: var(--text-primary);
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--icon-on-color);
+        background: var(--bg-inverted-hover);
+        border-color: var(--bg-inverted-hover);
+      }
+    }
+
+    &:active {
+      color: var(--icon-on-color);
+      background: var(--bg-inverted-active);
+      border-color: var(--bg-inverted-active);
+    }
+
+    @media (any-hover: none) {
+      &:active {
+        color: var(--icon-on-color);
+        background: var(--bg-inverted-hover);
+        border-color: var(--bg-inverted-hover);
+      }
+    }
+  }
+
+}
+
+.link{
+  @include tr;
+  @include hover{
+    color: var(--text-accent-hover);
+  }
+  @include active{
+    color: var(--text-accent-active);
+  }
+}
+

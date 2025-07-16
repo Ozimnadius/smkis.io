@@ -1,0 +1,107 @@
+@use "../helpers/index" as *;
+
+.footer {
+  &__top {
+    margin-top: 150px;
+    margin-bottom: 50px;
+    position: relative;
+  }
+
+  &__grid {
+    max-width: 1220px;
+    padding-inline: 20px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 350px 1fr 1fr;
+    gap: 164px;
+  }
+
+  &__left {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+  }
+
+  &__socials {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__social {
+    a {
+      border: 1px solid var(--border-on-primary);
+      border-radius: 50%;
+      padding: 8px;
+      @include tr;
+
+      @include hover {
+        border-color: var(--icon-accent-hover);
+      }
+      @include active {
+        border-color: var(--icon-accent-active);
+      }
+    }
+  }
+
+  &__right {
+    position: absolute;
+    bottom: 0;
+    right: 60px;
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+    margin-bottom: auto;
+  }
+
+  &__contact {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__contact-icon {
+    flex-shrink: 0;
+    translate: 0 4px;
+  }
+
+  &__contact-value {
+    font-size: 14px;
+
+    small {
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid var(--border-on-primary);
+    padding: 26px 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__policy {
+    font-size: 12px;
+  }
+
+  &__copy {
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+
+}
